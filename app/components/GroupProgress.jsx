@@ -1,51 +1,32 @@
 var React = require('react');
 
-const TrendingProblems = React.createClass({
+const GroupProgress = React.createClass({
   getInitialState: function () {
     return {
-      problems: trendingProblemsData
+      groups: groupData
     }
   },
   render: function() {
-    let problem = this.state.problems.map(function(problem, i) {
+    let group = this.state.groups.map(function(group, i) {
       return (
-        <tr key={i}>
-          <td>
-            <div className="row">
-              <div className="col-xs-12 col-sm-6">
-                <div className="title-author">
-                  <h4 className="problem-title add_margin_0">
-                      <a href={"/matlabcentral/cody/problems/" + problem.id}>{problem.title}</a>
-                  </h4>
-                  <p className="add_margin_0"><small>Created by <a href={"/matlabcentral/cody/players/" + problem.created_by_profile_id} title="title">{problem.created_by_name}</a></small></p>
-                  <p className="add_margin_0"><small>Problem Group: <a href={"/matlabcentral/cody/players/" + problem.problem_group_id}>{problem.problem_group_name}</a></small></p>
-                </div>
-              </div>
-              <div className="col-xs-12 col-sm-3">
-                {/* <a href="#" className="tag_component">{problem.tag}</a> */}
-                <a href="#" className="tag_component">Pizza</a>
-                <a href="#" className="tag_component">fun</a>
-              </div>
-              <div className="col-xs-12 col-sm-3">
-                <div className="row">
-                  <div className="col-xs-12 col-sm-6">
-                    <p className="add_font_color_mediumgray pull-right"><span className="icon-16 icon-like"></span>{problem.likes_count}</p>
-                  </div>
-                  <div className="col-xs-12 col-sm-6">
-                    <p className="add_font_color_mediumgray pull-right"><span className="icon-16 icon-account"></span>{problem.solvers_count}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
+          (group.solved_count != null) ?
+          (<div className="problem_group_progress add_margin_10" key={'group'+i}>
+            <p className="add_margin_5"><a href={'/matlabcentral/cody/groups/' + group.id}>{group.name}</a></p>
+            <div className="solved-progressbar">
+      				<div className="progress add_margin_0">
+      					<div className="progress-bar" role="progressbar" aria-valuenow={group.percentage_complete/100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}>{group.percentage_complete}
+      					</div>
+      				</div>
+      			</div>
+          </div>) :
+          (<span className="problem_group_progress add_margin_10" key={i}></span>)
       )
     })
     return (
-      <tbody>{problem}</tbody>
+      <div>{group}</div>
     )
   }
-})
+});
 
 /* Load groups data */
 var groupData =
