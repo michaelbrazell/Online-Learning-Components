@@ -22,6 +22,9 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: 'app/components/Main.jsx',
+      GroupCard: 'app/components/GroupCard.jsx',
+      GroupProgress: 'app/components/GroupProgress.jsx',
+      TrendingProblems: 'app/components/TrendingProblems.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
