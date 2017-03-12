@@ -12,6 +12,12 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        // This has effect on the react lib size
+        'NODE_ENV': JSON.stringify('production'),
+      },
     })
   ],
   output: {
