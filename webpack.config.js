@@ -13,12 +13,14 @@ module.exports = {
       '$': 'jquery',
       'jQuery': 'jquery'
     }),
-    new webpack.DefinePlugin({
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
       'process.env': {
-        // This has effect on the react lib size
-        'NODE_ENV': JSON.stringify('production'),
-      },
-    })
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.DedupePlugin(), //dedupe similar code
+    new webpack.optimize.UglifyJsPlugin(), //minify everything
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
   ],
   output: {
     path: __dirname,
