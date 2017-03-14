@@ -1,10 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-// var Main = require('Main');
-// If skipping main...
 var GroupCard = require('GroupCard');
-var GroupProgress = require('GroupProgress');
-var TrendingProblems = require('TrendingProblems');
+// var GroupProgress = require('GroupProgress');
+// var TrendingProblems = require('TrendingProblems');
 
 // App CSS
 require('style!css!sass!applicationStyles')
