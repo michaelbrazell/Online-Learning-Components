@@ -8,6 +8,33 @@ const GroupCard = React.createClass({
   },
   render: function() {
     let group = this.state.groups.map(function(group, i) {
+      function solvedStatus() {
+        if (group.solved_count != null && group.solved_count < group.number_of_problems) {
+          return (
+            <div className="panel-footer">
+              <p className="pull-left add_font_color_mediumgray add_margin_0">{group.solved_count}/{group.number_of_problems} Problems</p>
+              <div className="progress add_progress_small add_margin_0">
+                <div className="progress-bar" role="progressbar" aria-valuenow={group.percentage_complete / 100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}></div>
+              </div>
+            </div>
+          )
+        } else if (group.solved_count != null && group.solved_count == group.number_of_problems ){
+          return (
+            <div className="panel-footer">
+              <p className="pull-left add_font_color_green add_margin_0">Complete</p>
+              <div className="progress add_progress_small add_margin_0">
+                <div className="progress-bar add_background_color_green" role="progressbar" aria-valuenow={group.percentage_complete / 100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}></div>
+              </div>
+            </div>
+          )
+        } else {
+          return (
+            <div className="panel-footer">
+              <p className="pull-left add_font_color_mediumgray add_margin_0">{group.number_of_problems} Problems</p>
+            </div>
+          )
+        }
+      }
       return (
         <div className="col-xs-12 col-sm-6 col-md-4" key={'group'+i}>
           <div className="panel panel-default group_overview">
@@ -15,20 +42,7 @@ const GroupCard = React.createClass({
               <h4 className="add_margin_5"><a href={'/matlabcentral/cody/groups/' + group.id}>{group.name}</a></h4>
               <p className="add_margin_40">{group.description}</p>
             </div>
-            <div className="panel-footer">
-              { // Problem Count
-                (group.solved_count != null) ?
-                (<p className="pull-left add_font_color_mediumgray add_margin_0">{group.solved_count}/{group.number_of_problems} Problems</p>) :
-                (<p className="pull-left add_font_color_mediumgray add_margin_0">{group.number_of_problems} Problems</p>)
-              }
-              { // Progress Bar
-                (group.solved_count != null) ?
-                (<div className="progress add_progress_small add_margin_0">
-                  <div className="progress-bar" role="progressbar" aria-valuenow={group.percentage_complete / 100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}></div>
-                </div>) :
-                (<div className="hidden"></div>)
-              }
-            </div>
+              { solvedStatus() }
           </div>
         </div>
       )
@@ -81,8 +95,8 @@ var groupData =
     "name": "CUP Challenge",
     "description": "Problems developed by MathWorks in collaboration with Cambridge University Press. The problems are suitable for GCSE and A-Level students. ",
     "number_of_problems": 11,
-    "solved_count": null,
-    "percentage_complete": null
+    "solved_count": 11,
+    "percentage_complete": 100
   },
   {
     "id": 8,

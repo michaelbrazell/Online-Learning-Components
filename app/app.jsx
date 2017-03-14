@@ -18,11 +18,11 @@ ReactDOM.render(
   <GroupCard />,
   document.getElementById('group_card')
 );
-ReactDOM.render(
-  <GroupProgress />,
-  document.getElementById('group_progress')
-);
-ReactDOM.render(
-  <TrendingProblems />,
-  document.getElementById('trending_problems')
-);
+// ReactDOM.render(
+//   <GroupProgress />,
+//   document.getElementById('group_progress')
+// );
+// ReactDOM.render(
+//   <TrendingProblems />,
+//   document.getElementById('trending_problems')
+// );

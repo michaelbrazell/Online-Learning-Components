@@ -2,17 +2,9 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'script!jquery/dist/jquery.min.js',
     './app/app.jsx'
   ],
-  externals: {
-    jquery: `jQuery`
-  },
   plugins: [
-    new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery'
-    }),
     new webpack.DefinePlugin({ // <-- key to reducing React's size
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
@@ -20,7 +12,7 @@ module.exports = {
     }),
     new webpack.optimize.DedupePlugin(), //dedupe similar code
     new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks
   ],
   output: {
     path: __dirname,
