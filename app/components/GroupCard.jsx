@@ -1,7 +1,8 @@
 var React = require('react');
 var axios = require('axios');
 
-const API_URL = 'https://quarkbackend.com/getfile/michaelbrazell/codygroups';
+// const API_URL = 'https://quarkbackend.com/getfile/michaelbrazell/codygroups2';
+const API_URL = 'https://www-dev3.mathworks.com/matlabcentral/cody/home/get_groups';
 
 const GroupCard = React.createClass({
   getInitialState: function () {
@@ -11,30 +12,36 @@ const GroupCard = React.createClass({
   },
   componentDidMount: function () {
     var that = this;
+    var apiConfig = {
+      headers: {'Accept':'application/json'}
+    }
     var requestUrl = `${API_URL}`;
     this.setState({
       groups: []
     });
-    axios.get(requestUrl)
+    axios.get(requestUrl, apiConfig)
     .then(function(response){
       that.setState({
-        groups: response.data
+        groups: response.data.groups,
+        problems: response.data.problems,
+        progress: response.data.progress,
+        playerInfo: response.data.player_info
       })
     });
   },
   render: function() {
     let group = this.state.groups.map(function(group, i) {
       function solvedStatus() {
-        if (group.solved_count != null && group.solved_count < group.number_of_problems) {
+        if (group.solved_count != null && group.solved_count < group.problems_count) {
           return (
             <div className="panel-footer">
-              <p className="pull-left add_font_color_mediumgray add_margin_0">{group.solved_count}/{group.number_of_problems} Problems</p>
+              <p className="pull-left add_font_color_mediumgray add_margin_0">{group.solved_count}/{group.problems_count} Problems</p>
               <div className="progress add_progress_small add_margin_0">
                 <div className="progress-bar" role="progressbar" aria-valuenow={group.percentage_complete / 100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}></div>
               </div>
             </div>
           )
-        } else if (group.solved_count != null && group.solved_count == group.number_of_problems ){
+        } else if (group.solved_count != null && group.solved_count == group.problems_count ){
           return (
             <div className="panel-footer">
               <p className="pull-left add_font_color_green add_margin_0">Complete</p>
@@ -46,7 +53,7 @@ const GroupCard = React.createClass({
         } else {
           return (
             <div className="panel-footer">
-              <p className="pull-left add_font_color_mediumgray add_margin_0">{group.number_of_problems} Problems</p>
+              <p className="pull-left add_font_color_mediumgray add_margin_0">{group.problems_count} Problems</p>
             </div>
           )
         }
