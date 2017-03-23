@@ -2,7 +2,7 @@ var React = require('react');
 var axios = require('axios');
 
 // const API_URL = 'https://quarkbackend.com/getfile/michaelbrazell/codygroups2';
-const API_URL = 'https://www-dev3.mathworks.com/matlabcentral/cody/home/get_groups';
+const API_URL = '/matlabcentral/cody/home/get_groups';
 
 const GroupCard = React.createClass({
   getInitialState: function () {
