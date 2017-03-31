@@ -1,8 +1,8 @@
 var React = require('react');
 var axios = require('axios');
 
-// const API_URL = 'https://api.myjson.com/bins/10ky1z';
-const API_URL = '/matlabcentral/cody/home';
+const API_URL = 'https://api.myjson.com/bins/r9ifr';
+// const API_URL = '/matlabcentral/cody/home';
 
 const GroupCard = React.createClass({
   getInitialState: function () {
@@ -22,10 +22,7 @@ const GroupCard = React.createClass({
     axios.get(requestUrl, apiConfig)
     .then(function(response){
       that.setState({
-        groups: response.data.trending_groups,
-        problems: response.data.problems,
-        progress: response.data.progress,
-        playerInfo: response.data.player_info
+        groups: response.data.trending_groups
       })
     });
   },
@@ -60,7 +57,7 @@ const GroupCard = React.createClass({
       }
       return (
         <div className="col-xs-12 col-sm-6 col-md-4" key={'group'+i}>
-          <div className="panel panel-default group_overview">
+          <div className="panel panel-default add_text_wrapping group_overview">
             <div className="panel-body">
               <h4 className="add_margin_5"><a href={'/matlabcentral/cody/groups/' + group.id}>{group.name}</a></h4>
               <p className="add_margin_40">{group.description}</p>
