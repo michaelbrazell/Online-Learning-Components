@@ -1,32 +1,14 @@
 var React = require('react');
 var axios = require('axios');
 
-// const API_URL = 'https://api.myjson.com/bins/r9ifr';
-const API_URL = '/matlabcentral/cody/home';
-
 const GroupCard = React.createClass({
   getInitialState: function () {
     return {
-      groups: []
+      groups: this.props.groupsData.trending_groups
     }
-  },
-  componentDidMount: function () {
-    var that = this;
-    var apiConfig = {
-      headers: {'Accept':'application/json'}
-    }
-    var requestUrl = `${API_URL}`;
-    this.setState({
-      groups: []
-    });
-    axios.get(requestUrl, apiConfig)
-    .then(function(response){
-      that.setState({
-        groups: response.data.trending_groups
-      })
-    });
   },
   render: function() {
+    console.log('First item in the array: ' + this.state.groups)
     let group = this.state.groups.map(function(group, i) {
       function solvedStatus() {
         if (group.solved_count != null && group.solved_count < group.problems_count) {
