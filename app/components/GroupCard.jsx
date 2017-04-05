@@ -1,8 +1,8 @@
 var React = require('react');
 var axios = require('axios');
 
-const API_URL = 'https://api.myjson.com/bins/r9ifr';
-// const API_URL = '/matlabcentral/cody/home';
+// const API_URL = 'https://api.myjson.com/bins/r9ifr';
+const API_URL = '/matlabcentral/cody/home';
 
 const GroupCard = React.createClass({
   getInitialState: function () {
