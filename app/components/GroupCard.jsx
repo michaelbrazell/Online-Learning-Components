@@ -1,5 +1,4 @@
 var React = require('react');
-var axios = require('axios');
 
 const GroupCard = React.createClass({
   getInitialState: function () {
@@ -8,7 +7,6 @@ const GroupCard = React.createClass({
     }
   },
   render: function() {
-    console.log('First item in the array: ' + this.state.groups)
     let group = this.state.groups.map(function(group, i) {
       function solvedStatus() {
         if (!group.solved_count == 0 || !group.solved_count == null ) {
