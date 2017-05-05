@@ -1,9 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Displays "Complete" when group is complete 1`] = `
+exports[`Matches the rendered snapshot 1`] = `
 <div
   className="row add_equal_heights"
 >
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_2"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/2"
+          >
+            Cody Challenge
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          Problems, submitted by the Cody team and initially hidden, that reveal more problems as you solve them.
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_mediumgray add_margin_0"
+        >
+          95
+          /
+          96
+           Problems
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={0.9895833333333335}
+            className="progress-bar"
+            role="progressbar"
+            style={
+              Object {
+                "width": "98.95833333333334%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_5"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/5"
+          >
+            Tiles Challenge
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          Problems related to the Tiles Programming Contest. See http://www.mathworks.com/matlabcentral/contest/contests/36 
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_mediumgray add_margin_0"
+        >
+          2
+          /
+          7
+           Problems
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={0.2857142857142857}
+            className="progress-bar"
+            role="progressbar"
+            style={
+              Object {
+                "width": "28.57142857142857%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_6"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/6"
+          >
+            ASEE Challenge
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          Problems associated with the ASEE conference, June 10-13. Anyone is welcome to play!
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_green add_margin_0"
+        >
+          Complete
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={1}
+            className="progress-bar add_background_color_green"
+            role="progressbar"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
   <div
     className="col-xs-12 col-sm-6 col-md-4"
   >
@@ -56,19 +218,12 @@ exports[`Displays "Complete" when group is complete 1`] = `
       </div>
     </div>
   </div>
-</div>
-`;
-
-exports[`Matches the rendered snapshot 1`] = `
-<div
-  className="row add_equal_heights"
->
   <div
     className="col-xs-12 col-sm-6 col-md-4"
   >
     <div
       className="panel panel-default add_text_wrapping group_overview"
-      id="group_7"
+      id="group_8"
     >
       <div
         className="panel-body"
@@ -77,24 +232,64 @@ exports[`Matches the rendered snapshot 1`] = `
           className="add_margin_5"
         >
           <a
-            href="/matlabcentral/cody/groups/7"
+            href="/matlabcentral/cody/groups/8"
           >
-            CUP Challenge
+            Magic Numbers
           </a>
         </h4>
         <p
           className="add_margin_40"
         >
-          Problems developed by MathWorks in collaboration with Cambridge University Press. The problems are suitable for GCSE and A-Level students. 
+          This is a collection of problems from across Cody with the theme of special "named" numbers.
         </p>
       </div>
       <div
         className="panel-footer"
       >
         <p
-          className="pull-left add_font_color_green add_margin_0"
+          className="pull-left add_font_color_mediumgray add_margin_0"
         >
-          Complete
+          19
+           Problems
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_9"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/9"
+          >
+            Modeling & Simulation Challenge
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          Modeling & Simulation Challenge
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_mediumgray add_margin_0"
+        >
+          1
+          /
+          15
+           Problems
         </p>
         <div
           className="progress add_progress_small add_margin_0"
@@ -102,12 +297,177 @@ exports[`Matches the rendered snapshot 1`] = `
           <div
             aria-valuemax="100"
             aria-valuemin="0"
-            aria-valuenow={1}
-            className="progress-bar add_background_color_green"
+            aria-valuenow={0.06666666666666667}
+            className="progress-bar"
             role="progressbar"
             style={
               Object {
-                "width": "100%",
+                "width": "6.666666666666667%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_12"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/12"
+          >
+            Indexing I
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          The first collection of indexing problems, selected from problems submitted by members of the MATLAB Central community.
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_mediumgray add_margin_0"
+        >
+          6
+          /
+          27
+           Problems
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={0.2222222222222222}
+            className="progress-bar"
+            role="progressbar"
+            style={
+              Object {
+                "width": "22.22222222222222%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_13"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/13"
+          >
+            Indexing II
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          The second collection of indexing problems, selected from problems submitted by members of the MATLAB Central community.
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_mediumgray add_margin_0"
+        >
+          4
+          /
+          22
+           Problems
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={0.18181818181818182}
+            className="progress-bar"
+            role="progressbar"
+            style={
+              Object {
+                "width": "18.181818181818183%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_14"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/14"
+          >
+            Strings I
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          The first collection of string-based problems, selected from those submitted by members of the MATLAB Central community.
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_mediumgray add_margin_0"
+        >
+          2
+          /
+          30
+           Problems
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={0.06666666666666667}
+            className="progress-bar"
+            role="progressbar"
+            style={
+              Object {
+                "width": "6.666666666666667%",
               }
             }
           />
