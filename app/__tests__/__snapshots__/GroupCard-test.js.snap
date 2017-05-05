@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Displays "Complete" when group is complete 1`] = `
+<div
+  className="row add_equal_heights"
+>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_7"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/7"
+          >
+            CUP Challenge
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          Problems developed by MathWorks in collaboration with Cambridge University Press. The problems are suitable for GCSE and A-Level students. 
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_green add_margin_0"
+        >
+          Complete
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={1}
+            className="progress-bar add_background_color_green"
+            role="progressbar"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Matches the rendered snapshot 1`] = `
+<div
+  className="row add_equal_heights"
+>
+  <div
+    className="col-xs-12 col-sm-6 col-md-4"
+  >
+    <div
+      className="panel panel-default add_text_wrapping group_overview"
+      id="group_7"
+    >
+      <div
+        className="panel-body"
+      >
+        <h4
+          className="add_margin_5"
+        >
+          <a
+            href="/matlabcentral/cody/groups/7"
+          >
+            CUP Challenge
+          </a>
+        </h4>
+        <p
+          className="add_margin_40"
+        >
+          Problems developed by MathWorks in collaboration with Cambridge University Press. The problems are suitable for GCSE and A-Level students. 
+        </p>
+      </div>
+      <div
+        className="panel-footer"
+      >
+        <p
+          className="pull-left add_font_color_green add_margin_0"
+        >
+          Complete
+        </p>
+        <div
+          className="progress add_progress_small add_margin_0"
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={1}
+            className="progress-bar add_background_color_green"
+            role="progressbar"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
