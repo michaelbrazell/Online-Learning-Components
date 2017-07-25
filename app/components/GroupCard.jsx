@@ -37,11 +37,21 @@ const GroupCard = React.createClass({
           )
         }
       }
+      function cardHeader() {
+        if ( group.image == '' || group.image == null ) {
+          return (
+            <div className="panel-heading add_background_cover" style={{backgroundImage: 'url("http://lorempixel.com/250/250/abstract/")', height:'220px'}}></div>
+          )
+        } else {
+          return (
+            <div className="panel-heading add_background_cover" style={{backgroundImage: 'url("' + group.image + '")', height:'220px'}}></div>
+          )
+        }
+      }
       return (
         <div className="col-xs-12 col-sm-6 col-md-4" key={'group'+i}>
           <div className="panel panel-default add_text_wrapping group_overview " id={'group_' + group.id}>
-            <div className="panel-heading add_background_cover" style={{backgroundImage: 'url("http://lorempixel.com/250/250/animals/")', height:'220px'}}>
-            </div>
+              { cardHeader() }
             <div className="panel-body">
               <h4 className="add_margin_5"><a href={'/matlabcentral/cody/groups/' + group.id}>{group.name}</a></h4>
               <p className="add_margin_40">{group.description}</p>
