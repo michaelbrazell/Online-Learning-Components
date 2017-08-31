@@ -2,9 +2,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var GroupCard = require('GroupCard');
 
-function renderGroups(elem, jsonData) {
+function renderGroups(elem, columnData, jsonData) {
   ReactDOM.render(
-    <GroupCard groupsData={jsonData} />,
+    <GroupCard columns={columnData} groupsData={jsonData} />,
     document.getElementById(elem)
   );
 }

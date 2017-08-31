@@ -3,10 +3,27 @@ var React = require('react');
 const GroupCard = React.createClass({
   getInitialState: function () {
     return {
-      groups: this.props.groupsData.trending_groups
+      groups: this.props.groupsData.trending_groups, 
+      columns: this.props.columns
     }
   },
   render: function() {
+    let columns = this.state.columns
+    function columnSize(col) {
+      if (col == 3) {
+        return (
+          'col-xs-12 col-sm-6 col-md-4'
+        )
+      } else if (col == 4) {
+        return (
+          'col-xs-12 col-sm-6 col-md-3'
+        )
+      } else {
+        return (
+          'col-xs-12'
+        )
+      }
+    }
     let group = this.state.groups.map(function(group, i) {
       function solvedStatus() {
         if (!group.solved_count == 0 || !group.solved_count == null ) {
@@ -49,7 +66,7 @@ const GroupCard = React.createClass({
         }
       }
       return (
-        <div className="col-xs-12 col-sm-6 col-md-4" key={'group'+i}>
+        <div className={columnSize(columns)} key={'group'+i}>
           <div className="panel panel-default add_text_wrapping group_overview " id={'group_' + group.id}>
               { cardHeader() }
             <div className="panel-body">
