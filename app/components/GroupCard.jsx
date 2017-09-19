@@ -18,6 +18,10 @@ const GroupCard = React.createClass({
         return (
           'col-xs-12 col-sm-6 col-md-3'
         )
+      } else if (col == 2) {
+        return (
+          'col-xs-12 col-sm-6'
+        )
       } else {
         return (
           'col-xs-12'
