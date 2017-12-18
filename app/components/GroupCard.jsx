@@ -70,7 +70,7 @@ const GroupCard = React.createClass({
           )
         } else {
           return (
-            <div className="panel-heading add_background_cover" style={{backgroundImage: 'url("' + group.image + '")', height:'220px'}}></div>
+            <a href={'/matlabcentral/cody/groups/' + group.id}><div className="panel-heading add_background_cover" style={{backgroundImage: 'url("' + group.image + '")', height:'220px'}}></div></a>
           )
         }
       }
