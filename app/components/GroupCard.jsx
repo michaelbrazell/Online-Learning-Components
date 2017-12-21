@@ -47,7 +47,7 @@ const GroupCard = React.createClass({
             return (
               <div className="panel-footer">
                 <div className="add_margin_0">
-                  <span className="add_font_color_green">{group.solved_count}/{group.problems_count} Problems </span>
+                  <span className="add_font_color_green">Complete</span>
                   <span className="pull-right add_font_color_mediumgray">{group.recent_solvers_count} Finishers</span>
                 </div>
                 <div className="progress add_progress_small add_margin_0">
