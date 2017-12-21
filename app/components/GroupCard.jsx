@@ -36,7 +36,7 @@ const GroupCard = React.createClass({
               <div className="panel-footer">
                 <div className="add_font_color_mediumgray add_margin_0">
                   <span>{group.solved_count}/{group.problems_count} Problems </span>
-                  <span className="pull-right">{group.recent_solvers.length} Finishers</span>
+                  <span className="pull-right">{group.recent_solvers_count} Finishers</span>
                 </div>
                 <div className="progress add_progress_small add_margin_0">
                   <div className="progress-bar" role="progressbar" aria-valuenow={group.percentage_complete / 100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}></div>
@@ -46,6 +46,10 @@ const GroupCard = React.createClass({
           } else {
             return (
               <div className="panel-footer">
+                <div className="add_margin_0">
+                  <span className="add_font_color_green">{group.solved_count}/{group.problems_count} Problems </span>
+                  <span className="pull-right add_font_color_mediumgray">{group.recent_solvers_count} Finishers</span>
+                </div>
                 <div className="progress add_progress_small add_margin_0">
                   <div className="progress-bar add_background_color_green" role="progressbar" aria-valuenow={group.percentage_complete / 100} aria-valuemin="0" aria-valuemax="100" style={{width: group.percentage_complete+"%"}}></div>
                 </div>
@@ -57,7 +61,7 @@ const GroupCard = React.createClass({
             <div className="panel-footer">
               <div className="add_font_color_mediumgray add_margin_0">
                 <span>{group.problems_count} Problems</span>
-                <span className="pull-right">{group.recent_solvers.length} Finishers</span>
+                <span className="pull-right">{group.recent_solvers_count} Finishers</span>
               </div>
             </div>
           )
