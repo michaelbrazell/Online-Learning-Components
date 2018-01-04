@@ -1,13 +1,20 @@
 var React = require('react');
 
-const GroupCard = React.createClass({
-  getInitialState: function () {
-    return {
+class GroupCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       groups: this.props.groupsData.trending_groups,
       columns: this.props.columns
     }
-  },
-  render: function() {
+
+  // getInitialState: function () {
+    // return {
+    //   groups: this.props.groupsData.trending_groups,
+    //   columns: this.props.columns
+    // }
+  }
+  render() {
     let columns = this.state.columns
     function columnSize(col) {
       if (col == 3) {
@@ -97,6 +104,6 @@ const GroupCard = React.createClass({
       </div>
     )
   }
-});
+}
 
 module.exports = GroupCard;
