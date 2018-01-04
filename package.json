@@ -1,7 +1,7 @@
 {
   "name": "cody-components",
-  "version": "1.0.2",
-  "description": "Componentizing the Cody Landing Page w/ React",
+  "version": "2.0.0",
+  "description": "Componentizing the Cody Landing Page w/ React.  v2.0.0 introduces React 16+, updates components, switches to ES2016.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -13,15 +13,16 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-router": "^2.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
-    "babel-jest": "^19.0.0",
+    "babel-jest": "^22.0.0",
     "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.5.0",
+    "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.5.0",
     "create-react-class": "^15.5.2",
     "css-loader": "^0.23.1",
